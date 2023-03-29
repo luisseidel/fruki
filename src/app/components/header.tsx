@@ -20,6 +20,11 @@ export default function header() {
                             Contact
                         </Link>
                     </li>
+                    <li className="transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:underline">
+                        <Link href={'/about'}>
+                            About
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -40,7 +40,7 @@ export default function footer() {
                 <span className="flex justify-center site-name text-4xl font-extrabold uppercase leading-none text-center pb-3 px-2">
                     Luis<br />Seidel
                 </span>
-                <span className="text-xs text-gray-500">© 2023. All rights reserved</span>
+                <span className="text-xs text-gray-500">Copyright © {new Date().getFullYear()}. All rights reserved</span>
             </div>
         </footer>
     );

@@ -1,6 +1,7 @@
 import Header from './header';
 import Footer from './footer';
 import Head from "next/head";
+import '../../app/globals.css'
 
 export default function format({children}) {
     return (
@@ -9,8 +10,10 @@ export default function format({children}) {
                 <title>Teste</title>
             </Head>
             <Header />
-            <main className='h-screen'>
-                {children}
+            <main className='min-h-full w-full flex justify-center'>
+                <div className='container'>
+                    {children}
+                </div>
             </main>
             <Footer />
         </>
