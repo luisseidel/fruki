@@ -1,5 +1,5 @@
 import Header from './header';
-import Footer from './footer';
+import Footer from './Footer/footer';
 import Head from "next/head";
 import '../../app/globals.css'
 

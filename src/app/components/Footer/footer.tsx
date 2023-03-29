@@ -1,3 +1,4 @@
+import "./socials.css";
 
 export default function footer() {
     return (
