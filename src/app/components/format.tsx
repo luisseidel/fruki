@@ -8,6 +8,8 @@ export default function format({children}) {
         <>
             <Head>
                 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+                <link rel="stylesheet" href="/dist/socials.css" />
+                <link rel="stylesheet" href="/dist/main.css" />
                 <title>Fruki</title>
             </Head>
             <Header />
