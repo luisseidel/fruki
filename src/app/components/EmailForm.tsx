@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SyntheticEvent, useEffect, useState } from 'react';
 import AlertError from './AlertError';
 import AlertSucess from './AlertSucess';
 
@@ -8,17 +8,22 @@ export default function EmailForm() {
         from: "", to: "", subject: "", html: ""
     });
 
-    function handleChange(e) {
-        setData({ ...data, [e.target.id]: e.target.value });
+    function handleChange(e: React.FormEvent<HTMLFormElement>) {
+        const target = e.target as HTMLButtonElement;
+        setData({ ...data, [target.id]: target.value });
     }
 
     function cleanFormFields() {
-        document.getElementById("form-contato").reset();
+        let form = document.getElementById("form-contato") as HTMLFormElement;
+        if (form != null) {
+            form.reset();
+        }
     }
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        setData({ ...data, [e.target.id]: e.target.value });       
+        const target = e.target as HTMLButtonElement;
+        setData({ ...data, [target.id]: target.value });       
 
         fetch("http://localhost:3000/api/send-email", {
             method: "POST",

@@ -3,7 +3,7 @@ import Footer from './Footer/footer';
 import Head from "next/head";
 import '../../app/globals.css'
 
-export default function format({children}) {
+export default function format({children}: {children: any}) {
     return (
         <>
             <Head>
