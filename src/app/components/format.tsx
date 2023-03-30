@@ -7,13 +7,12 @@ export default function format({children}) {
     return (
         <>
             <Head>
-                <title>Teste</title>
+                <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+                <title>Fruki</title>
             </Head>
             <Header />
-            <main className='min-h-full w-full flex justify-center'>
-                <div className='container'>
-                    {children}
-                </div>
+            <main className='min-h-full w-full'>
+                {children}
             </main>
             <Footer />
         </>
